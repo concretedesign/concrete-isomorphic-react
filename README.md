@@ -1,5 +1,7 @@
 # Concrete Isomorphic React Boilerplate
 
+A boilerplate project for isomorphic react.js + hapi.js using gulp and browserify
+
 ### Setup
 
 ```bash
@@ -16,17 +18,13 @@ npm run dev
 
 View the server Debug console (care of Hapi's TV plugin): http://localhost:3030/debug/console
 
----
-
 There are a number of commands accessible through `npm run`:
- - `npm run start-client`: Start the front-end server with Gulp
- - `npm run start-server`: Start the API server (Hapi.js)
+ - `npm run client`: Start the front-end server with Gulp
+ - `npm run server`: Start the API server (Hapi.js)
  - `npm run dev`: Run the front-end server and API concurrently
  - `npm run build`: Build the front-end static assets and copy into the Hapi.js /public directory
  - `npm run production`: Run API server, copying static assets into /public
  - `npm run deploy`: Build assets and deploy to server by running `node deploy.js` (nothing there for now)
-
----
 
 
 ## App structure (FIXME)

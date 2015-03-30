@@ -1,14 +1,12 @@
-// Lib
 var React = window.React = require('react'); // Also assigned to window for react chrome extension
+
 var Router = require('react-router');
 var RouteHandler = Router.RouteHandler;
 
-// Components
 var Header = require('../../partials/header.jsx');
 var Footer = require('../../partials/footer.jsx');
 var Sidebar = require('../../partials/sidebar.jsx');
-
-var title = "Title that should be changed";
+var Main = require('../../pages/main.jsx');
 
 // Initialize our main component
 var Main = React.createClass({
@@ -27,11 +25,9 @@ var Main = React.createClass({
 
   render: function () {
     return (
-      <DocumentTitle title={ title }>
-        <div className="main-container">
-          <RouteHandler />
-        </div>
-      </DocumentTitle>
+      <div className={this.state.showSidebar ? 'slide-left' : ''}>
+        <h1>About Page</h1>
+      </div>
     );
   }
 });
