@@ -1,0 +1,35 @@
+.header-container {
+  width: 100%;
+  // background: $header-container-color;
+}
+
+header {
+  margin-top: 16px;
+  padding: 10px 0;
+  margin-bottom: 10px;
+  @include outer-container;
+}
+
+.branding {
+  @include span-columns(6);
+
+  img {
+    width: 96px;
+  }
+}
+
+nav {
+  @include span-columns(6);
+  padding-right: 28px;
+
+  ul {
+    text-align: right;
+
+    li {
+      display: inline;
+      margin-left: 10px;
+      font-size: 24px;
+      line-height: 90px;
+    }
+  }
+}

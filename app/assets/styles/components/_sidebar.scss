@@ -1,0 +1,14 @@
+.collections-sidebar {
+  position: fixed;
+  width: $sidebar-width;
+  height: 100%;
+  top: 0;
+  right: 0;
+  background: #999;
+  @include transition($slide-transition);
+  @include transform(translateX($sidebar-width));
+}
+
+.slide-left .collections-sidebar {
+  @include transform(translateX($sidebar-width/2));
+}

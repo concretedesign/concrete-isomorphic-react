@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html manifest="cache.appcache">
+<head>
+    <title>Typewriter</title>
+    <meta name="description" content="Typewriter API builder">
+    <meta charset="utf-8" />
+
+    <!-- Serif -->
+    <link href='http://fonts.googleapis.com/css?family=Vollkorn' rel='stylesheet' type='text/css'>
+    <link href='http://fonts.googleapis.com/css?family=Merriweather' rel='stylesheet' type='text/css'>
+    <link href='http://fonts.googleapis.com/css?family=Neuton' rel='stylesheet' type='text/css'>
+    <link href='http://fonts.googleapis.com/css?family=Unica+One' rel='stylesheet' type='text/css'>
+    <link href='http://fonts.googleapis.com/css?family=Questrial' rel='stylesheet' type='text/css'>
+    <link href='http://fonts.googleapis.com/css?family=Sanchez:400italic,400' rel='stylesheet' type='text/css'>
+    <link href='http://fonts.googleapis.com/css?family=Roboto+Slab' rel='stylesheet' type='text/css'>
+
+    <!-- Sans serif -->
+    <link href='http://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css'>
+    <link href='http://fonts.googleapis.com/css?family=Roboto' rel='stylesheet' type='text/css'>
+    <link href='http://fonts.googleapis.com/css?family=Droid+Sans' rel='stylesheet' type='text/css'>
+    <link href='http://fonts.googleapis.com/css?family=PT+Sans' rel='stylesheet' type='text/css'>
+    <link href='http://fonts.googleapis.com/css?family=Cabin' rel='stylesheet' type='text/css'>
+    <link href='http://fonts.googleapis.com/css?family=Maven+Pro:400,500,700' rel='stylesheet' type='text/css'>
+
+    <link rel="stylesheet" href="/styles/app.css" type="text/css">
+</head>
+<body>
+    <div id="typewriter"></div>
+
+    <!-- FIXME: Turn into browserify components or otherwise compile into typewriter.js -->
+    <script src="/js/vendor/Sortable/Sortable.js"></script>
+    <script src="/js/vendor/Sortable/react-sortable-mixin.js"></script>
+
+    <script src="/js/typewriter.js"></script>
+    <!-- only for development
+    <script>
+      document.write('<script src="http://' + (location.host || 'localhost').split(':')[0] + ':35729/livereload.js?snipver=1"></' + 'script>')
+    </script> -->
+</body>
+</html>

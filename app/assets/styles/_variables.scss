@@ -1,0 +1,86 @@
+// Typography
+$sans-serif: 'Maven Pro', sans-serif;
+$serif: 'Maven Pro', serif;
+$base-font-family: $sans-serif;
+$header-font-family: $serif;
+
+// Font Sizes
+$base-font-size: 1em;
+$h1-font-size: $base-font-size * 2.25;
+$h2-font-size: $base-font-size * 2;
+$h3-font-size: $base-font-size * 1.75;
+$h4-font-size: $base-font-size * 1.5;
+$h5-font-size: $base-font-size * 1.25;
+$h6-font-size: $base-font-size;
+
+// Line height
+$base-line-height: 1.5;
+$header-line-height: 1.25;
+
+// Other Sizes
+$base-border-radius: 5px;
+$base-spacing: $base-line-height * 1em;
+$base-z-index: 0;
+$sidebar-width: 300px;
+$slide-transition: all 300ms ease-in-out;
+
+// Colors
+$blue: #477DCA;
+$dark-gray: #555;
+$medium-gray: #999;
+$other-gray: #606060;
+$very-light-gray: #E9EAEC;
+$light-gray: #ecf0f1;
+$light-red: #FBE3E4;
+$light-yellow: #FFF6BF;
+$light-green: #E6EFC2;
+
+// Background Colors
+$base-background-color: linear-gradient(180deg, #00d39b, #573ba0);
+$header-container-color: $light-gray;
+
+// Type colors
+$type-header-bg-color: #FFF;
+$action-color: #F68773;
+$properties-bg-color: #FAFCFB;
+$text-input-color: #EEF7F6;
+$text-input-border-color: #CFE3E2;
+$dark-text-color: $dark-gray;
+
+// Font Colors
+$base-font-color: #fff;
+$base-accent-color: $blue;
+
+// Link Colors
+$base-link-color: #FFF;
+$base-link-underline-color: #F68773;
+$hover-link-color: darken($base-accent-color, 15);
+$base-button-color: $base-link-color;
+$hover-button-color: $hover-link-color;
+
+// Flash Colors
+$alert-color: $light-yellow;
+$error-color: $light-red;
+$notice-color: lighten($base-accent-color, 40);
+$success-color: $light-green;
+
+// Border color
+$base-border-color: $light-gray;
+$base-border: 1px solid $base-border-color;
+
+// Forms
+$form-border-color: $base-border-color;
+$form-border-color-hover: darken($base-border-color, 10);
+$form-border-color-focus: $base-accent-color;
+$form-border-radius: $base-border-radius;
+$form-box-shadow: inset 0 1px 3px rgba(black,0.06);
+$form-box-shadow-focus: $form-box-shadow, 0 0 5px rgba(darken($form-border-color-focus, 5), 0.7);
+$form-font-size: $base-font-size;
+$form-font-family: $base-font-family;
+
+// Type management
+$type-container-height: 380px;
+$type-header-height: 55px;
+$type-padding: 10px;
+$type-box-shadow: rgba(100,100,100,.4) 0px 2px 2px;
+

@@ -1,0 +1,31 @@
+.properties-container {
+  margin-top: 3px;
+
+  .properties {
+    padding: 10px;
+  }
+}
+
+.property-definitions {
+  position: absolute;
+  bottom: -30px;
+  width: 100%;
+  height: $type-container-height - 90;
+  max-height: 0;
+  overflow: hidden;
+  padding: 15px;
+  background: white;
+  color: black;
+  border-top: 3px solid $light-gray;
+  @include transition(max-height 250ms ease-in-out);
+
+  &.visible {
+    bottom: 0;
+    max-height: $type-container-height;
+    overflow: auto;
+  }
+
+  a {
+    color: $dark-gray;
+  }
+}

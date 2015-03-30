@@ -1,0 +1,71 @@
+.types {
+  @include outer-container;
+  padding-top: 10px;
+  margin-bottom: 50px;
+}
+
+.type {
+  float: left;
+  color: $dark-text-color;
+  width: 48%;
+  margin-right: 2%;
+  margin-bottom: 20px;
+  position: relative;
+  background-color: $properties-bg-color;
+  height: $type-container-height;
+  box-shadow: $type-box-shadow;
+  border-top: 1px solid rgba(150,150,150,.2);
+  cursor: -webkit-grab; cursor: -moz-grab;
+  border-radius: $base-border-radius;
+
+  &.dragging {
+    cursor: -webkit-grabbing; cursor: -moz-grabbing;
+  }
+
+  .inner-container {
+    height: $type-container-height - $type-header-height + 3;
+    width: 100%;
+    position: absolute;
+    overflow: scroll;
+    top: $type-header-height - 3;
+    border-radius: 0 0 $base-border-radius $base-border-radius;
+
+    .no-properties {
+      text-align: center;
+      padding-top: 40px;
+    }
+  }
+
+  .type-header {
+    position: absolute;
+    height: $type-header-height;
+    width: 100%;
+    background-color: $type-header-bg-color;
+    padding: $type-padding;
+    border-radius: 5px 5px 0 0;
+    border-bottom: 1px solid #eee;
+    box-shadow: rgba(100, 100, 100, 0.1) 0px 1px 2px;
+
+    h5 {
+      padding: 5px;
+      display: inline-block;
+      width: 50%;
+      font-weight: 500;
+    }
+  }
+
+  .add-property {
+    display: block;
+    z-index: 1;
+    width: 100%;
+    text-align: center;
+    position: absolute;
+    bottom: 0px;
+    height: 34px;
+    border-top: 1px solid #eee;
+
+    svg {
+      margin: 5px 5px 0 0;
+    }
+  }
+}
