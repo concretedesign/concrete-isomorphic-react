@@ -1,5 +1,6 @@
 // Lib
 var React = require('react');
+var DocumentTitle = require('react-document-title');
 var Router = require('react-router');
 var RouteHandler = Router.RouteHandler;
 
