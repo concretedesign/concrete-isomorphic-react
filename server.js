@@ -4,11 +4,13 @@ var Tv = require('tv');
 var colors = require('colors');
 var React = require('react');
 var Router = require('react-router');
+require('node-jsx').install({extension: '.jsx'})
 
 // Components
 var Html = require('./app/html.jsx')
 
 var config = require('./config');
+var routes = require('./routes.jsx');
 
 var server = new Hapi.Server();
 server.connection({
@@ -21,10 +23,11 @@ server.route({
   method:  "*",
   path:    "/{params*}",
   handler: function (request, reply) {
-    Router.run(routes, req.url, function (Handler, state) {
+    Router.run(routes, request.url, function (Handler, state) {
       var title  = 'Places';
-      var markup = React.renderToString(<Handler />);
-      var html   = React.renderToStaticMarkup(<Html title={title} markup={markup} />);
+      // var markup = React.renderToString(<Handler />);
+      // var html   = React.renderToStaticMarkup(<Html title={title} markup={markup} />);
+      var html = 'asdf';
 
       // TODO: send 404 status code
       // (see: https://github.com/gpbl/isomorphic-react-template/issues/3)

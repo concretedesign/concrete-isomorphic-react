@@ -1,12 +1,12 @@
 // Lib
-var React = window.React = require('react'); // Also assigned to window for react chrome extension
+var React = require('react');
 var Router = require('react-router');
 var RouteHandler = Router.RouteHandler;
 
-// Components
-var Header = require('../../partials/header.jsx');
-var Footer = require('../../partials/footer.jsx');
-var Sidebar = require('../../partials/sidebar.jsx');
+// // Components
+// var Header = require('../../partials/header.jsx');
+// var Footer = require('../../partials/footer.jsx');
+// var Sidebar = require('../../partials/sidebar.jsx');
 
 var title = "Title that should be changed";
 
