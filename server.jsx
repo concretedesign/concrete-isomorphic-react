@@ -7,7 +7,7 @@ var routes = require('./routes.jsx');
 var Html = require('./app/html.jsx');
 
 module.exports = function (request, reply) {
-  Router.run(routes, '/', function (Handler, state) {
+  Router.run(routes, request.url.path, function (Handler, state) {
 
     var title  = 'Places';
     var markup = React.renderToString(<Handler />);
