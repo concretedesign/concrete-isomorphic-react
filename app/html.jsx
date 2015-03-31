@@ -7,9 +7,11 @@ var Html = React.createClass({
       <html>
         <head>
           <title>{ this.props.title }</title>
-          <script src="/js/bundle.js" type="text/javascript" />
+          <link rel="stylesheet" href="/styles/app.css" type="text/css" />
         </head>
         <body dangerouslySetInnerHTML={{__html: this.props.markup}}></body>
+
+        <script src="/js/app.js" type="text/javascript" />
       </html>
     );
   }

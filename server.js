@@ -21,6 +21,43 @@ server.connection({
 });
 
 server.route({
+  method: 'GET',
+  path: '/js/{param*}',
+  handler: {
+    directory: {
+      path: './public/js',
+      listing: true,
+      index: true
+    }
+  }
+});
+
+server.route({
+  method: 'GET',
+  path: '/images/{param*}',
+  handler: {
+    directory: {
+      path: './public/img',
+      listing: true,
+      index: true
+    }
+  }
+});
+
+server.route({
+  method: 'GET',
+  path: '/styles/{param*}',
+  handler: {
+    directory: {
+      path: './public/styles',
+      listing: true,
+      index: true
+    }
+  }
+});
+
+
+server.route({
   method:  "*",
   path:    "/{params*}",
   handler: routeHandler

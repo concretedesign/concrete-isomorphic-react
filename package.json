@@ -1,8 +1,8 @@
 {
-  "name": "typewriter",
+  "name": "concrete-isomorphic-react",
   "version": "0.0.1",
-  "description": "A semantic API builder",
-  "main": "index.js",
+  "description": "Isomorphic react boilerplate with hapi",
+  "main": "server.js",
   "homepage": "https://github.com/mcrider/typewriter",
   "repository": {
     "type": "git",
