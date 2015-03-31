@@ -120,7 +120,7 @@ gulp.task('webserver', function() {
   connect.server({
     livereload: true,
     port: 8000,
-    root: ['build']
+    root: ['public'] needs an index.html file
   });
 });
 
