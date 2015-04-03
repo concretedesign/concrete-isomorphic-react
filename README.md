@@ -69,7 +69,7 @@ Each component should be in its own folder with the following structure:
 
 └── component-name
    ├── component-name.jsx        # Main react component
-   ├── component-name.scss       # Styles particular to this component
+   ├── component-name.scss       # Styles particular to this component.  Must be added to /app/styles/app.scss
    └── component-name.jade       # (Optional) Jade template for this component's render method
 
 ```

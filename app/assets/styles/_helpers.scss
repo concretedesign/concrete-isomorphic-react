@@ -1,4 +1,7 @@
 // Various helper classes
+%clearfix {
+  @include clearfix;
+}
 
 .pull-right {
   float:right;
