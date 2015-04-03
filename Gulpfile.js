@@ -68,7 +68,7 @@ gulp.task('scripts', function() {
   gulp.src(['app/app.js'])
     .pipe(browserify({
     debug: !production,
-    transform: ['reactify']
+    transform: ['reactify', 'react-jade']
   }))
     .on('error', browserifyHandler)
     .pipe(gulpif(production, uglify())) // only minify if production
@@ -93,9 +93,7 @@ gulp.task('copy', function() {
   gulp.src(['app/*.html', 'app/*.appcache', 'app/favicon.ico', 'app/robots.txt', 'app/.htaccess'])
     .pipe(gulp.dest('public/'))
     .pipe(gulpif(!production, connect.reload()));
-
 });
-
 
 gulp.task('watch', function() {
   // Create LiveReload server
@@ -104,6 +102,7 @@ gulp.task('watch', function() {
   gulp.watch('app/*.jsx', ['scripts']);
   gulp.watch('app/components/**/*.js', ['scripts']);
   gulp.watch('app/components/**/*.jsx', ['scripts']);
+  gulp.watch('app/components/**/*.jade', ['scripts']);
   gulp.watch('app/assets/styles/**/*.scss', ['styles']);
   gulp.watch('app/assets/img/**/*', ['images']);
   gulp.watch('app/assets/img/*', ['images']);
