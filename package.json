@@ -14,7 +14,7 @@
     "client": "gulp",
     "server": "nodemon server.js",
     "dev": "npm run client & npm run server",
-    "build": "gulp build --type production && cd ../server && rm -rf public/* && cp -r ../client/build/* public/",
+    "build": "gulp build --type production",
     "production": "npm run build && npm run server",
     "deploy": "npm run build && node deploy.js"
   },
