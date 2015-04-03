@@ -51,8 +51,8 @@ View the server Debug console (care of Hapi's TV plugin): [http://localhost:3030
 │
 ├── public             # Container for the static files.
 │
-├── config.js   # Contains global configuration like server ports, database info, etc.
-└── Gulpfile.js    # Contains the gulp tasks for the build
+├── config.js          # Contains global configuration like server ports, database info, etc.
+└── Gulpfile.js        # Contains the gulp tasks for the build
 ```
 
 ## Component Structure
