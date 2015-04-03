@@ -7,8 +7,6 @@ var Route = Router.Route;
 
 var routes = require('../routes.jsx');
 
-Router.run(routes, function (Handler) {
+Router.run(routes, Router.HistoryLocation, function (Handler) {
   React.render(<Handler/>, document.body);
 });
-
-module.exports = Main;

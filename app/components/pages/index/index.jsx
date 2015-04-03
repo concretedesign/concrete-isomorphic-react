@@ -3,7 +3,7 @@ var Router = require('react-router');
 var RouteHandler = Router.RouteHandler;
 
 // Initialize our main component
-var Main = React.createClass({
+var Index = React.createClass({
 
   getInitialState: function() {
     return {
@@ -26,4 +26,4 @@ var Main = React.createClass({
   }
 });
 
-module.exports = Main;
+module.exports = Index;

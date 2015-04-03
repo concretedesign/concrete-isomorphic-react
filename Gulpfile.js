@@ -59,7 +59,7 @@ gulp.task('styles', function() {
   }))
     .pipe(sourcemaps.write())
     .pipe(gulp.dest('public/styles/'))
-    .pipe(gulpif(!production, livereload()));
+    .pipe(gulpif(!production, connect.reload()));
 });
 
 gulp.task('scripts', function() {
@@ -73,7 +73,7 @@ gulp.task('scripts', function() {
     .on('error', browserifyHandler)
     .pipe(gulpif(production, uglify())) // only minify if production
   .pipe(gulp.dest('public/js/'))
-    .pipe(gulpif(!production, livereload()));
+    .pipe(gulpif(!production, connect.reload()));
 });
 
 gulp.task('vendor', function() {
@@ -91,15 +91,15 @@ gulp.task('copy', function() {
   var production = util.env.type === 'production';
 
   gulp.src(['app/*.html', 'app/*.appcache', 'app/favicon.ico', 'app/robots.txt', 'app/.htaccess'])
-    .pipe(gulp.dest('build/'))
-    .pipe(gulpif(!production, livereload()));
+    .pipe(gulp.dest('public/'))
+    .pipe(gulpif(!production, connect.reload()));
 
 });
 
 
 gulp.task('watch', function() {
   // Create LiveReload server
-  livereload.listen();
+  // livereload.listen();
   gulp.watch('app/*.js', ['scripts']);
   gulp.watch('app/*.jsx', ['scripts']);
   gulp.watch('app/components/**/*.js', ['scripts']);
@@ -109,10 +109,11 @@ gulp.task('watch', function() {
   gulp.watch('app/assets/img/*', ['images']);
   gulp.watch('app/assets/img/**/*', ['vendor']);
   gulp.watch('app/assets/img/*', ['vendor']);
+  gulp.watch('app/*.html', ['copy']);
 });
 
 gulp.task('livereload', function() {
-  gulp.src(['build/styles/*.css', 'build/js/*.js', 'build/img/*', 'build/index.html'])
+  gulp.src(['public/styles/*.css', 'public/js/*.js', 'public/img/*', 'public/index.html'])
     .pipe(connect.reload());
 });
 
@@ -120,7 +121,7 @@ gulp.task('webserver', function() {
   connect.server({
     livereload: true,
     port: 8000,
-    root: ['public'] needs an index.html file
+    root: ['public']
   });
 });
 

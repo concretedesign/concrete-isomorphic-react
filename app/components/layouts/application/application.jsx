@@ -12,7 +12,7 @@ var RouteHandler = Router.RouteHandler;
 var title = "Title that should be changed";
 
 // Initialize our main component
-var Main = React.createClass({
+var Application = React.createClass({
 
   getInitialState: function() {
     return {
@@ -37,4 +37,4 @@ var Main = React.createClass({
   }
 });
 
-module.exports = Main;
+module.exports = Application;

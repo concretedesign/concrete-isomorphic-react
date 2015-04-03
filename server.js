@@ -6,9 +6,6 @@ var React = require('react');
 var Router = require('react-router');
 require('node-jsx').install({extension: '.jsx'});
 
-// Components
-var Html = require('./app/html.jsx')
-
 var config = require('./config');
 var routes = require('./routes.jsx');
 var routeHandler = require('./server.jsx');
