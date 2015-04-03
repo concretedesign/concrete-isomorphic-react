@@ -17,4 +17,17 @@
 @import "helpers";
 @import "typography";
 
-// Most of our CSS is in components, loaded here
+// Most of our CSS is in components, loaded here (don't delete the yeoman hook lines below!)
+// ===== application hook =====
+@import "../../components/layouts/application/application";
+
+// ===== pages hook =====
+@import "../../components/pages/about/about";
+@import "../../components/pages/index/index";
+
+// ===== partials hook =====
+@import "../../components/partials/footer/footer";
+@import "../../components/partials/header/header";
+@import "../../components/partials/sidebar/sidebar";
+
+// ===== ui hook =====
