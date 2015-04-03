@@ -29,6 +29,7 @@ tags
 
 # ignores specific to this repo
 build/
+public/
 
 .DS_Store
 */.DS_Store
