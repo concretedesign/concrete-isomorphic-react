@@ -1,6 +1,6 @@
 # Concrete Isomorphic React Boilerplate
 
-A boilerplate project for isomorphic react.js + hapi.js using gulp and browserify
+A boilerplate project for isomorphic react.js + hapi.js using gulp and browserify.
 
 ### Setup
 
@@ -20,9 +20,9 @@ There are a number of commands accessible through `npm run`:
  - `npm run client`: Start the front-end server with Gulp.  Accessible at [http://localhost:8000](http://localhost:8000).
  - `npm run server`: Start the back-end server (Hapi.js).  Accessible at [http://localhost:3030](http://localhost:3030).
  - `npm run dev`: Run the front-end server and API concurrently.
- - `npm run build`: Build the front-end static assets minifed for production into the `/public` directory.
+ - `npm run build`: Build the front-end static assets minifed for production into `/public`.
  - `npm run production`: Run a production build then run server.
- - `npm run deploy`: Build assets and deploy to server by running `node deploy.js` (nothing there for now)
+ - `npm run deploy`: Build assets and deploy to server by running `node deploy.js` (TODO)
 
 View the server Debug console (care of Hapi's TV plugin): [http://localhost:3030/debug/console](http://localhost:3030/debug/console).
 
@@ -64,6 +64,6 @@ Each component should be in its own folder with the following structure:
 └── component-name
    ├── component-name.jsx        # Main react component
    ├── component-name.scss       # Styles particular to this component.  Must be added to /app/styles/app.scss
-   └── component-name.jade       # (Optional) Jade template for this component's render method
+   └── component-name.jade       # (Optional) Jade template for this component's render method.  Must be handled by .jsx file
 
 ```
