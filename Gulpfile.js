@@ -14,6 +14,8 @@ var sequence = require('run-sequence');
 var util = require('gulp-util');
 var clean = require('gulp-clean');
 var neat = require('node-neat').includePaths;
+var historyApiFallback = require('connect-history-api-fallback');
+
 
 var ROOT = __dirname + '/public'
 
@@ -120,7 +122,10 @@ gulp.task('webserver', function() {
   connect.server({
     livereload: true,
     port: 8000,
-    root: ['public']
+    root: ['public'],
+    middleware: function(connect, opt) {
+      return [ historyApiFallback ];
+    }
   });
 });
 
