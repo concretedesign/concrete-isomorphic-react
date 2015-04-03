@@ -53,6 +53,18 @@ server.route({
   }
 });
 
+server.route({
+  method: 'GET',
+  path: '/admin/{param*}',
+  handler: {
+    directory: {
+      path: './public/admin',
+      listing: true,
+      index: true
+    }
+  }
+});
+
 
 server.route({
   method:  "*",

@@ -35,6 +35,7 @@ View the server Debug console (care of Hapi's TV plugin): [http://localhost:3030
 ├── routes.jsx         # All client side routes (accessible isomorphically)
 │
 ├── app
+│   ├── admin/         # Rest API admin interface (based on ng-admin).  Accessible server-side.
 │   ├── assets/        # Static assets and CSS (Sass) that is compiled or copied into /public
 │   │   ├── img        # Images copied into /public.  Web-accessible from /img/filename.ext
 │   │   └── styles     # Sass files compiled into app.scss.  Only global styles should go here, others are included with component

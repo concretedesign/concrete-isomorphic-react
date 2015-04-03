@@ -83,6 +83,11 @@ gulp.task('vendor', function() {
     .pipe(gulp.dest('public/js/vendor/'));
 });
 
+gulp.task('admin', function() {
+  gulp.src(['app/admin/**/*', 'app/admin/**/*'])
+    .pipe(gulp.dest('public/admin/'));
+});
+
 gulp.task('images', function() {
   gulp.src(['app/assets/img/**/*.png', 'app/assets/img/**/*.jpg', 'app/assets/img/**/*.gif', 'app/assets/img/**/*.svg'])
     .pipe(imagemin())
@@ -129,7 +134,7 @@ gulp.task('webserver', function() {
   });
 });
 
-gulp.task('dev', ['styles', 'scripts', 'images', 'vendor']);
+gulp.task('dev', ['styles', 'scripts', 'images', 'vendor', 'admin']);
 
 gulp.task('build', function(done) {
   sequence('clean', 'dev', 'copy', done);
