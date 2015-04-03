@@ -31,7 +31,7 @@ server.route({
 
 server.route({
   method: 'GET',
-  path: '/images/{param*}',
+  path: '/img/{param*}',
   handler: {
     directory: {
       path: './public/img',

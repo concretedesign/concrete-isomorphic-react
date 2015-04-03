@@ -2,7 +2,6 @@
 
 body {
   margin: 0;
-  @include linear-gradient(#2C869E, #2C6EA0);
 }
 
 a {
@@ -12,9 +11,4 @@ a {
 
 .container {
   @include outer-container;
-}
-
-.slide-left {
-  @include transition($slide-transition);
-  @include transform(translateX(-($sidebar-width/2)));
 }

@@ -55,7 +55,7 @@ View the server Debug console (care of Hapi's TV plugin): [http://localhost:3030
 └── Gulpfile.js        # Contains the gulp tasks for the build
 ```
 
-## Component Structure
+## Component structure
 
 Each component should be in its own folder with the following structure:
 
