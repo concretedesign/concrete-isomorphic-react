@@ -69,12 +69,13 @@ gulp.task('scripts', function() {
 
   gulp.src(['app/app.js'])
     .pipe(browserify({
-    debug: !production,
-    transform: ['reactify', 'react-jade']
-  }))
+      debug: !production,
+      paths: ['./node_modules','./app'],
+      transform: ['reactify', 'react-jade']
+    }))
     .on('error', browserifyHandler)
     .pipe(gulpif(production, uglify())) // only minify if production
-  .pipe(gulp.dest('public/js/'))
+    .pipe(gulp.dest('public/js/'))
     .pipe(gulpif(!production, connect.reload()));
 });
 
